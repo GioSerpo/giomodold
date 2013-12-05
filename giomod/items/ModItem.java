@@ -8,12 +8,6 @@ import giomod.items.coins.ItemDime;
 import giomod.items.coins.ItemNickel;
 import giomod.items.coins.ItemPenny;
 import giomod.items.coins.ItemQuarter;
-import giomod.items.money.ItemDollar;
-import giomod.items.money.ItemFifty;
-import giomod.items.money.ItemFive;
-import giomod.items.money.ItemHundred;
-import giomod.items.money.ItemTen;
-import giomod.items.money.ItemTwenty;
 import giomod.items.tools.ItemEmeraldAxe;
 import giomod.items.tools.ItemEmeraldHoe;
 import giomod.items.tools.ItemEmeraldPickaxe;
@@ -90,12 +84,13 @@ public class ModItem {
 	public static String[] cartridgeTextures = {"blackinkcartridge", "colorinkcartridge", "emptyinkcartridge"};
 	public static String[] cartridgeLocNames = {"Black Ink Cartridge", "Color Ink Cartridge", "Empty Ink Cartridge"};
 	
-	public static Item Dollar;
-	public static Item Five;
-	public static Item Ten;
-	public static Item Twenty;
-	public static Item Fifty;
-	public static Item Hundred;
+	
+	public static Item Dollar, Five, Ten, Twenty, Fifty, Hundred;
+	/**In order of worth (1, 5, 10, 20, 50, 100)*/
+	public static Item[] bills = {Dollar, Five, Ten, Twenty, Fifty, Hundred};
+	public static String[] billNames = {"dollar", "five", "ten", "twenty", "fifty", "hundred"};
+	public static String[] billTextures = {"onedollar", "fivedollar", "tendollar", "twentydollar", "fiftydollar", "hundreddollar"};
+	public static String[] billLocNames = {"One Dollar Bill", "Five Dollar Bill", "Ten Dollar Bill", "Twenty Dollar Bill", "Fifty Dollar Bill", "Hundred Dollar Bill"};
 	
 	public static Item Penny;
 	public static Item Nickel;
@@ -113,14 +108,12 @@ public class ModItem {
 		{
 			cartridges[i] = new ModItemBase(i + 10009, cartridgeTextures[i], cartridgeNames[i]);
 		}
-
-		Dollar = (new ItemDollar(1013).setUnlocalizedName("One Dollar Bill"));
-		Five = (new ItemFive(1014).setUnlocalizedName("Five Dollar Bill"));
-		Ten = (new ItemTen(1015).setUnlocalizedName("Ten Dollar Bill"));
-		Twenty = (new ItemTwenty(1016).setUnlocalizedName("Twenty Dollar Bill"));
-		Fifty = (new ItemFifty(1017).setUnlocalizedName("Fifty Dollar Bill"));
-		Hundred = (new ItemHundred(1018).setUnlocalizedName("Hundred Dollar Bill"));
-
+		
+		for (int i = 0; i < 6; i++)
+		{
+			bills[i] = new ModItemBase(i + 10012, billTextures[i], billNames[i]);
+		}
+		
 		Penny = (new ItemPenny(1019).setUnlocalizedName("Penny"));
 		Nickel = (new ItemNickel(1020).setUnlocalizedName("Nickel"));
 		Dime = (new ItemDime(1021).setUnlocalizedName("Dime"));
@@ -168,13 +161,12 @@ public class ModItem {
 		{
 			LanguageRegistry.instance().addStringLocalization("item." + cartridgeNames[num] + ".name", cartridgeLocNames[num]);
 		}
-		LanguageRegistry.addName(Dollar, "One Dollar Bill");
-		LanguageRegistry.addName(Five, "Five Dollar Bill");
-		LanguageRegistry.addName(Ten, "Ten Dollar Bill");
-		LanguageRegistry.addName(Twenty, "Twenty Dollar Bill");
-		LanguageRegistry.addName(Fifty, "Fifty Dollar Bill");
-		LanguageRegistry.addName(Hundred, "Hundred Dollar Bill");
-
+		
+		for (int num = 0; num < 6; num++)
+		{
+			LanguageRegistry.instance().addStringLocalization("item." + billNames[num] + ".name", billLocNames[num]);
+		}
+		
 		LanguageRegistry.addName(Penny, "Penny");
 		LanguageRegistry.addName(Nickel, "Nickel");
 		LanguageRegistry.addName(Dime, "Dime");

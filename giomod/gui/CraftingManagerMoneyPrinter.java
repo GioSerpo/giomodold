@@ -35,34 +35,34 @@ public class CraftingManagerMoneyPrinter
 
     public CraftingManagerMoneyPrinter()
     {
-    	this.addRecipe(new ItemStack(ModItem.Dollar, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.bills[0], 1), new Object[] 
     			{
-    		"CSB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'S', Block.stone, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
+    		"CSB", "PPP", 'C', ModItem.cartridges[1], 'S', Block.stone, 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(ModItem.Five, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.bills[1], 1), new Object[] 
     			{
-    		"CNB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'N', ModItem.NickelIngot, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
+    		"CNB", "PPP", 'C', ModItem.cartridges[1], 'N', ModItem.ingots[3], 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(ModItem.Ten, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.bills[2], 1), new Object[] 
     			{
-    		"CIB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'I', ModItem.CopperIngot, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
+    		"CIB", "PPP", 'C', ModItem.cartridges[1], 'I', ModItem.ingots[2], 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(ModItem.Twenty, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.bills[3], 1), new Object[] 
     			{
-    		"CRB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'R', ModItem.RubyGio, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
+    		"CRB", "PPP", 'C', ModItem.cartridges[1], 'R', ModItem.ingots[0], 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(ModItem.Fifty, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.bills[4], 1), new Object[] 
     			{
-    		"CGB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'G', ModItem.Sapphire, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
+    		"CGB", "PPP", 'C', ModItem.cartridges[1], 'G', ModItem.ingots[1], 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(ModItem.Hundred, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.bills[5], 1), new Object[] 
     			{
-    		"CEB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'E', Item.emerald, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
+    		"CEB", "PPP", 'C', ModItem.cartridges[1], 'E', Item.emerald, 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
    
     	Collections.sort(this.recipes, new RecipeSorterMoneyPrinter(this));

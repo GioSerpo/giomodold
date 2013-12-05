@@ -42,22 +42,22 @@ public class CraftingManagerCoinPress
     {
         this.addRecipe(new ItemStack(ModItem.Penny, 5), new Object[] 
         	{
-        	"0C0","000", "000", 'C',  ModItem.CopperIngot
+        	"0C0", 'C',  ModItem.ingots[2]
         	});
         
         this.addRecipe(new ItemStack(ModItem.Nickel, 5), new Object[] 
         	{
-        	"0N0","000", "000", 'N',  ModItem.NickelIngot
+        	"0N0", 'N',  ModItem.ingots[3]
         	});
         
         this.addRecipe(new ItemStack(ModItem.Dime, 5), new Object[] 
         	{
-        	"CNN","000","000", 'C', ModItem.CopperIngot, 'N',  ModItem.NickelIngot
+        	"CNN", 'C', ModItem.ingots[2], 'N',  ModItem.ingots[3]
         	});
         
         this.addRecipe(new ItemStack(ModItem.Quarter, 5), new Object[] 
         	{
-        	"NNN","000","000", 'N', ModItem.NickelIngot
+        	"NNN","000","000", 'N', ModItem.ingots[3]
         	});
         
         Collections.sort(this.recipes, new RecipeSorterCoinPress(this));
