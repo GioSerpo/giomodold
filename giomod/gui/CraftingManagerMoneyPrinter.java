@@ -1,24 +1,21 @@
 package giomod.gui;
 
 import giomod.GioMod;
+import giomod.items.ModItem;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import cpw.mods.fml.common.ICraftingHandler;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.crafting.ShapelessRecipes;
+import net.minecraft.world.World;
 
 public class CraftingManagerMoneyPrinter
 {
@@ -38,34 +35,34 @@ public class CraftingManagerMoneyPrinter
 
     public CraftingManagerMoneyPrinter()
     {
-    	this.addRecipe(new ItemStack(GioMod.Dollar, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.Dollar, 1), new Object[] 
     			{
-    		"CSB", "PPP", "000", 'C', GioMod.ColorInkCartridge, 'S', Block.stone, 'B', GioMod.BlackInkCartridge, 'P', Item.paper 
+    		"CSB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'S', Block.stone, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(GioMod.Five, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.Five, 1), new Object[] 
     			{
-    		"CNB", "PPP", "000", 'C', GioMod.ColorInkCartridge, 'N', GioMod.NickelIngot, 'B', GioMod.BlackInkCartridge, 'P', Item.paper 
+    		"CNB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'N', ModItem.NickelIngot, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(GioMod.Ten, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.Ten, 1), new Object[] 
     			{
-    		"CIB", "PPP", "000", 'C', GioMod.ColorInkCartridge, 'I', GioMod.CopperIngot, 'B', GioMod.BlackInkCartridge, 'P', Item.paper 
+    		"CIB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'I', ModItem.CopperIngot, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(GioMod.Twenty, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.Twenty, 1), new Object[] 
     			{
-    		"CRB", "PPP", "000", 'C', GioMod.ColorInkCartridge, 'R', GioMod.RubyGio, 'B', GioMod.BlackInkCartridge, 'P', Item.paper 
+    		"CRB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'R', ModItem.RubyGio, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(GioMod.Fifty, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.Fifty, 1), new Object[] 
     			{
-    		"CGB", "PPP", "000", 'C', GioMod.ColorInkCartridge, 'G', GioMod.Sapphire, 'B', GioMod.BlackInkCartridge, 'P', Item.paper 
+    		"CGB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'G', ModItem.Sapphire, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
     		});
     	
-    	this.addRecipe(new ItemStack(GioMod.Hundred, 1), new Object[] 
+    	this.addRecipe(new ItemStack(ModItem.Hundred, 1), new Object[] 
     			{
-    		"CEB", "PPP", "000", 'C', GioMod.ColorInkCartridge, 'E', Item.emerald, 'B', GioMod.BlackInkCartridge, 'P', Item.paper 
+    		"CEB", "PPP", "000", 'C', ModItem.ColorInkCartridge, 'E', Item.emerald, 'B', ModItem.BlackInkCartridge, 'P', Item.paper 
     		});
    
     	Collections.sort(this.recipes, new RecipeSorterMoneyPrinter(this));
