@@ -11,7 +11,10 @@ import giomod.gui.tabGioTab;
 import giomod.handlers.GenerationHandler;
 import giomod.handlers.GuiHandler;
 import giomod.items.ModItem;
+<<<<<<< HEAD
 import giomod.oredictreg.ModOreRegistration;
+=======
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -75,8 +78,11 @@ public class GioMod
 		CoinPress = (new BlockCoinPress(1004,"CoinPress").setUnlocalizedName("Coin Press").setHardness(2.0F));
 		MoneyPrinter = (new BlockMoneyPrinter(1005,"MoneyPrinter").setUnlocalizedName("Money Printer").setHardness(2.0F));
 		
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 		GameRegistry.addSmelting(GioMod.CopperOre.blockID, new ItemStack (ModItem.ingots[2]), 0.4f);
 		GameRegistry.addSmelting(GioMod.NickelOre.blockID, new ItemStack(ModItem.ingots[3]), 0.4f);
 				
@@ -96,9 +102,12 @@ public class GioMod
 		GameRegistry.registerBlock(CoinPress, "coinPress");
 		GameRegistry.registerBlock(MoneyPrinter, "moneyPrinter");
 		
+<<<<<<< HEAD
 		ModOreRegistration.ingotRegistration();
 		ModOreRegistration.oreRegistration();
 		
+=======
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 		GameRegistry.addRecipe(new ItemStack(ModItem.cartridges[0], 1), new Object []
 				{
 				"RRR", "R0R", "RRR", 'R', Item.redstone
@@ -106,12 +115,20 @@ public class GioMod
 		
 		GameRegistry.addRecipe(new ItemStack(GioMod.CoinPress, 1), new Object []
 				{
+<<<<<<< HEAD
 				"PPP", "N0N", "PPP", 'P', Block.pistonBase, 'N', ModOreRegistration.NICKELING
+=======
+				"PPP", "N0N", "PPP", 'P', Block.pistonBase, 'N', ModItem.ingots[3]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(GioMod.MoneyPrinter, 1), new Object []
 				{
+<<<<<<< HEAD
 				"C0B", "NNN", "III", 'C', ModItem.cartridges[1], 'B', ModItem.cartridges[0], 'N', ModOreRegistration.NICKELING, 'I', ModItem.ingots[2]
+=======
+				"C0B", "NNN", "III", 'C', ModItem.cartridges[1], 'B', ModItem.cartridges[0], 'N', ModItem.ingots[3], 'I', ModItem.ingots[2]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.emeraldArmorHead, 1), new Object []
@@ -136,42 +153,74 @@ public class GioMod
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyArmorHead, 1), new Object []
 				{
+<<<<<<< HEAD
 				"RRR", "R0R", "000", 'R', ModOreRegistration.RUBY
+=======
+				"RRR", "R0R", "000", 'R', ModItem.ingots[0]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyArmorBody, 1), new Object []
 				{
+<<<<<<< HEAD
 				"R0R", "RRR", "RRR", 'R', ModOreRegistration.RUBY
+=======
+				"R0R", "RRR", "RRR", 'R', ModItem.ingots[0]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyArmorLeggings, 1), new Object []
 				{
+<<<<<<< HEAD
 				"RRR", "R0R", "R0R", 'R', ModOreRegistration.RUBY
+=======
+				"RRR", "R0R", "R0R", 'R', ModItem.ingots[0]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyArmorBoots, 1), new Object []
 				{
+<<<<<<< HEAD
 				"R0R", "R0R", "000", 'R', ModOreRegistration.RUBY
+=======
+				"R0R", "R0R", "000", 'R', ModItem.ingots[0]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireArmorHead, 1), new Object []
 				{
+<<<<<<< HEAD
 				"RRR", "R0R", "000", 'R', ModOreRegistration.SAPPHIRE
+=======
+				"RRR", "R0R", "000", 'R', ModItem.ingots[1]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireArmorBody, 1), new Object []
 				{
+<<<<<<< HEAD
 				"R0R", "RRR", "RRR", 'R', ModOreRegistration.SAPPHIRE
+=======
+				"R0R", "RRR", "RRR", 'R', ModItem.ingots[1]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireArmorLeggings, 1), new Object []
 				{
+<<<<<<< HEAD
 				"RRR", "R0R", "R0R", 'R', ModOreRegistration.SAPPHIRE
+=======
+				"RRR", "R0R", "R0R", 'R', ModItem.ingots[1]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireArmorBoots, 1), new Object []
 				{
+<<<<<<< HEAD
 				"R0R", "R0R", "000", 'R', ModOreRegistration.SAPPHIRE
+=======
+				"R0R", "R0R", "000", 'R', ModItem.ingots[1]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.EmeraldAxe, 1), new Object []
@@ -201,52 +250,92 @@ public class GioMod
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyAxe, 1), new Object []
 				{
+<<<<<<< HEAD
 				"EE0", "ES0", "0S0", 'E', ModOreRegistration.RUBY, 'S', Item.stick
+=======
+				"EE0", "ES0", "0S0", 'E', ModItem.ingots[0], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyHoe, 1), new Object []
 				{
+<<<<<<< HEAD
 				"EE0", "0S0", "0S0", 'E', ModOreRegistration.RUBY, 'S', Item.stick
+=======
+				"EE0", "0S0", "0S0", 'E', ModItem.ingots[0], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyPickaxe, 1), new Object []
 				{
+<<<<<<< HEAD
 				"EEE", "0S0", "0S0", 'E', ModOreRegistration.RUBY, 'S', Item.stick
+=======
+				"EEE", "0S0", "0S0", 'E', ModItem.ingots[0], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubyShovel, 1), new Object []
 				{
+<<<<<<< HEAD
 				"0E0", "0S0", "0S0", 'E', ModOreRegistration.RUBY, 'S', Item.stick
+=======
+				"0E0", "0S0", "0S0", 'E', ModItem.ingots[0], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.RubySword, 1), new Object []
 				{
+<<<<<<< HEAD
 				"0E0", "0E0", "0S0", 'E', ModOreRegistration.RUBY, 'S', Item.stick
+=======
+				"0E0", "0E0", "0S0", 'E', ModItem.ingots[0], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireAxe, 1), new Object []
 				{
+<<<<<<< HEAD
 				"EE0", "ES0", "0S0", 'E', ModOreRegistration.SAPPHIRE, 'S', Item.stick
+=======
+				"EE0", "ES0", "0S0", 'E', ModItem.ingots[1], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireHoe, 1), new Object []
 				{
+<<<<<<< HEAD
 				"EE0", "0S0", "0S0", 'E', ModOreRegistration.SAPPHIRE, 'S', Item.stick
+=======
+				"EE0", "0S0", "0S0", 'E', ModItem.ingots[1], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphirePickaxe, 1), new Object []
 				{
+<<<<<<< HEAD
 				"EEE", "0S0", "0S0", 'E', ModOreRegistration.SAPPHIRE, 'S', Item.stick
+=======
+				"EEE", "0S0", "0S0", 'E', ModItem.ingots[1], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireShovel, 1), new Object []
 				{
+<<<<<<< HEAD
 				"0E0", "0S0", "0S0", 'E', ModOreRegistration.SAPPHIRE, 'S', Item.stick
+=======
+				"0E0", "0S0", "0S0", 'E', ModItem.ingots[1], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.SapphireSword, 1), new Object []
 				{
+<<<<<<< HEAD
 				"0E0", "0E0", "0S0", 'E', ModOreRegistration.SAPPHIRE, 'S', Item.stick
+=======
+				"0E0", "0E0", "0S0", 'E', ModItem.ingots[1], 'S', Item.stick
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 				});
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItem.cartridges[0], 1), new Object []

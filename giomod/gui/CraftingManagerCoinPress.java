@@ -2,7 +2,10 @@ package giomod.gui;
 
 import giomod.GioMod;
 import giomod.items.ModItem;
+<<<<<<< HEAD
 import giomod.oredictreg.ModOreRegistration;
+=======
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,22 +46,38 @@ public class CraftingManagerCoinPress
     {
         this.addRecipe(new ItemStack(ModItem.coins[0], 5), new Object[] 
         	{
+<<<<<<< HEAD
         	"0C0", 'C', ModOreRegistration.COPPERING
+=======
+        	"0C0", 'C',  ModItem.ingots[2]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
         	});
         
         this.addRecipe(new ItemStack(ModItem.coins[1], 5), new Object[] 
         	{
+<<<<<<< HEAD
         	"0N0", 'N',  ModOreRegistration.NICKELING
+=======
+        	"0N0", 'N',  ModItem.ingots[3]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
         	});
         
         this.addRecipe(new ItemStack(ModItem.coins[2], 5), new Object[] 
         	{
+<<<<<<< HEAD
         	"CNN", 'C', ModOreRegistration.COPPERING, 'N',  ModOreRegistration.NICKELING
+=======
+        	"CNN", 'C', ModItem.ingots[2], 'N',  ModItem.ingots[3]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
         	});
         
         this.addRecipe(new ItemStack(ModItem.coins[3], 5), new Object[] 
         	{
+<<<<<<< HEAD
         	"NNN", 'N', ModOreRegistration.NICKELING
+=======
+        	"NNN","000","000", 'N', ModItem.ingots[3]
+>>>>>>> 1e4a46207a31f1402db5e46d4a919f14c3d2c27d
         	});
         
         Collections.sort(this.recipes, new RecipeSorterCoinPress(this));
