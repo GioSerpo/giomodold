@@ -2,6 +2,7 @@ package giomod.gui;
 
 import giomod.GioMod;
 import giomod.items.ModItem;
+import giomod.oredictreg.ModOreRegistration;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,22 +43,22 @@ public class CraftingManagerMoneyPrinter
     	
     	this.addRecipe(new ItemStack(ModItem.bills[1], 1), new Object[] 
     			{
-    		"CNB", "PPP", 'C', ModItem.cartridges[1], 'N', ModItem.ingots[3], 'B', ModItem.cartridges[0], 'P', Item.paper 
+    		"CNB", "PPP", 'C', ModItem.cartridges[1], 'N', ModOreRegistration.NICKELING, 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
     	this.addRecipe(new ItemStack(ModItem.bills[2], 1), new Object[] 
     			{
-    		"CIB", "PPP", 'C', ModItem.cartridges[1], 'I', ModItem.ingots[2], 'B', ModItem.cartridges[0], 'P', Item.paper 
+    		"CIB", "PPP", 'C', ModItem.cartridges[1], 'I', ModOreRegistration.COPPERING, 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
     	this.addRecipe(new ItemStack(ModItem.bills[3], 1), new Object[] 
     			{
-    		"CRB", "PPP", 'C', ModItem.cartridges[1], 'R', ModItem.ingots[0], 'B', ModItem.cartridges[0], 'P', Item.paper 
+    		"CRB", "PPP", 'C', ModItem.cartridges[1], 'R', ModOreRegistration.RUBY, 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
     	this.addRecipe(new ItemStack(ModItem.bills[4], 1), new Object[] 
     			{
-    		"CGB", "PPP", 'C', ModItem.cartridges[1], 'G', ModItem.ingots[1], 'B', ModItem.cartridges[0], 'P', Item.paper 
+    		"CGB", "PPP", 'C', ModItem.cartridges[1], 'G', ModOreRegistration.SAPPHIRE, 'B', ModItem.cartridges[0], 'P', Item.paper 
     		});
     	
     	this.addRecipe(new ItemStack(ModItem.bills[5], 1), new Object[] 

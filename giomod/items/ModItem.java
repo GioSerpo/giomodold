@@ -23,6 +23,7 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -185,5 +186,6 @@ public class ModItem {
 		LanguageRegistry.addName(SapphirePickaxe, "Sapphire Pickaxe");
 		LanguageRegistry.addName(SapphireShovel, "Sapphire Shovel");
 		LanguageRegistry.addName(SapphireSword, "Sapphire Sword");
+		
 	}
 }

@@ -2,6 +2,7 @@ package giomod.gui;
 
 import giomod.GioMod;
 import giomod.items.ModItem;
+import giomod.oredictreg.ModOreRegistration;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,22 +43,22 @@ public class CraftingManagerCoinPress
     {
         this.addRecipe(new ItemStack(ModItem.coins[0], 5), new Object[] 
         	{
-        	"0C0", 'C',  ModItem.ingots[2]
+        	"0C0", 'C', ModOreRegistration.COPPERING
         	});
         
         this.addRecipe(new ItemStack(ModItem.coins[1], 5), new Object[] 
         	{
-        	"0N0", 'N',  ModItem.ingots[3]
+        	"0N0", 'N',  ModOreRegistration.NICKELING
         	});
         
         this.addRecipe(new ItemStack(ModItem.coins[2], 5), new Object[] 
         	{
-        	"CNN", 'C', ModItem.ingots[2], 'N',  ModItem.ingots[3]
+        	"CNN", 'C', ModOreRegistration.COPPERING, 'N',  ModOreRegistration.NICKELING
         	});
         
         this.addRecipe(new ItemStack(ModItem.coins[3], 5), new Object[] 
         	{
-        	"NNN","000","000", 'N', ModItem.ingots[3]
+        	"NNN", 'N', ModOreRegistration.NICKELING
         	});
         
         Collections.sort(this.recipes, new RecipeSorterCoinPress(this));
