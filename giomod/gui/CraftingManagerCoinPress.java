@@ -40,22 +40,22 @@ public class CraftingManagerCoinPress
 
     public CraftingManagerCoinPress()
     {
-        this.addRecipe(new ItemStack(ModItem.Penny, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.coins[0], 5), new Object[] 
         	{
         	"0C0", 'C',  ModItem.ingots[2]
         	});
         
-        this.addRecipe(new ItemStack(ModItem.Nickel, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.coins[1], 5), new Object[] 
         	{
         	"0N0", 'N',  ModItem.ingots[3]
         	});
         
-        this.addRecipe(new ItemStack(ModItem.Dime, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.coins[2], 5), new Object[] 
         	{
         	"CNN", 'C', ModItem.ingots[2], 'N',  ModItem.ingots[3]
         	});
         
-        this.addRecipe(new ItemStack(ModItem.Quarter, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.coins[3], 5), new Object[] 
         	{
         	"NNN","000","000", 'N', ModItem.ingots[3]
         	});
