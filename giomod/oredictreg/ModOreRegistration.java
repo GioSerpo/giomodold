@@ -9,15 +9,15 @@ public class ModOreRegistration
 
 {
 	
-	public final static String SAPPHIRE = "Sapphire";
-	public final static String RUBY = "Ruby";
-	public final static String COPPERING = "Copper Ingot";
-	public final static String NICKELING = "Nickel Ingot";
+	public final static String SAPPHIRE = "gemSapphire";
+	public final static String RUBY = "gemRuby";
+	public final static String COPPERING = "ingotCopper";
+	public final static String NICKELING = "ingotNickel";
 	
-	public final static String SAPPHIREORE = "Sapphire Ore";
-	public final static String RUBYORE = "Ruby Ore";
-	public final static String COPPERORE = "Copper Ore";
-	public final static String NICKELORE = "Nickel Ore";
+	public final static String SAPPHIREORE = "oreSapphire";
+	public final static String RUBYORE = "oreRuby";
+	public final static String COPPERORE = "oreCopper";
+	public final static String NICKELORE = "oreNickel";
 	
 	public static void ingotRegistration()
 	{
