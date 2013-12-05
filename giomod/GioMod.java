@@ -10,7 +10,6 @@ import giomod.blocks.ores.BlockSapphireOreGio;
 import giomod.gui.tabGioTab;
 import giomod.handlers.GenerationHandler;
 import giomod.handlers.GuiHandler;
-import giomod.items.ItemGioTabIcon;
 import giomod.items.ModItem;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -36,8 +35,6 @@ public class GioMod
 	@Instance("giomod")
 	public static GioMod instance;
 	public static GuiHandler GuiHandler = new GuiHandler();
-	public static CreativeTabs GioTab;
-	public static Item GioTabIcon;
 	
 	public static Block RubyOreGio;
 	public static Block SapphireOre;
@@ -50,10 +47,11 @@ public class GioMod
 	
 	public static BiomeGenBase GiosMountians;
 	
+	public static CreativeTabs GioTab = (new tabGioTab(CreativeTabs.getNextID()));
+
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) 
 	{
-
 		NetworkRegistry.instance().registerGuiHandler(this, GuiHandler);
 	}
 
@@ -61,8 +59,8 @@ public class GioMod
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{		
-		GioTab = (new tabGioTab(CreativeTabs.getNextID(), "tabGioTab"));
-		GioTabIcon = (new ItemGioTabIcon(3000).setUnlocalizedName("Afflouhau Mods"));
+		
+		LanguageRegistry.instance().addStringLocalization("itemGroup.gioTab", "Afflouhau Mods");
 		
 		ModItem.registerItems();
 
@@ -78,10 +76,7 @@ public class GioMod
 		
 		GameRegistry.addSmelting(GioMod.CopperOre.blockID, new ItemStack (ModItem.ingots[2]), 0.4f);
 		GameRegistry.addSmelting(GioMod.NickelOre.blockID, new ItemStack(ModItem.ingots[3]), 0.4f);
-		
-
-		LanguageRegistry.addName(GioTabIcon, "Afflouhau Mods");
-		
+				
 		LanguageRegistry.addName(RubyOreGio, "Ruby Ore");
 		LanguageRegistry.addName(SapphireOre, "Sapphire Ore");
 		LanguageRegistry.addName(CopperOre, "Copper Ore");
@@ -90,13 +85,13 @@ public class GioMod
 		LanguageRegistry.addName(CoinPress, "Coin Press");
 		LanguageRegistry.addName(MoneyPrinter, "Money Printer");
 		
-		GameRegistry.registerBlock(RubyOreGio);
-		GameRegistry.registerBlock(SapphireOre);
-		GameRegistry.registerBlock(CopperOre);
-		GameRegistry.registerBlock(NickelOre);
+		GameRegistry.registerBlock(RubyOreGio, "rubyOre");
+		GameRegistry.registerBlock(SapphireOre, "sapphireOre");
+		GameRegistry.registerBlock(CopperOre, "copperOre");
+		GameRegistry.registerBlock(NickelOre, "nickelOre");
 		
-		GameRegistry.registerBlock(CoinPress);
-		GameRegistry.registerBlock(MoneyPrinter);
+		GameRegistry.registerBlock(CoinPress, "coinPress");
+		GameRegistry.registerBlock(MoneyPrinter, "moneyPrinter");
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.cartridges[0], 1), new Object []
 				{

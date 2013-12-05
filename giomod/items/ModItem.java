@@ -4,10 +4,6 @@ import giomod.GioMod;
 import giomod.items.armor.ItemEmeraldArmor;
 import giomod.items.armor.ItemRubyArmor;
 import giomod.items.armor.ItemSapphireArmor;
-import giomod.items.coins.ItemDime;
-import giomod.items.coins.ItemNickel;
-import giomod.items.coins.ItemPenny;
-import giomod.items.coins.ItemQuarter;
 import giomod.items.tools.ItemEmeraldAxe;
 import giomod.items.tools.ItemEmeraldHoe;
 import giomod.items.tools.ItemEmeraldPickaxe;
@@ -92,32 +88,25 @@ public class ModItem {
 	public static String[] billTextures = {"onedollar", "fivedollar", "tendollar", "twentydollar", "fiftydollar", "hundreddollar"};
 	public static String[] billLocNames = {"One Dollar Bill", "Five Dollar Bill", "Ten Dollar Bill", "Twenty Dollar Bill", "Fifty Dollar Bill", "Hundred Dollar Bill"};
 	
-	public static Item Penny;
-	public static Item Nickel;
-	public static Item Dime;
-	public static Item Quarter;
+	public static Item Penny, Nickel, Dime, Quarter;
+	/**In order of worth (Penny, Nickel, Dime, Quarter)*/
+	public static Item[] coins = {Penny, Nickel, Dime, Quarter};
+	public static String[] coinNames = {"penny", "nickel", "dime", "quarter"}; //texture names are the same
+	public static String[] coinLocNames = {"Penny", "Nickel", "Dime", "Quarter"};
 	
 	public static void registerItems()
 	{
-		for (int num = 0; num < 4; num++)
-		{
-			ingots[num] = new ModItemBase(num + 10005, ingotTextures[num], ingotNames[num]);
-		}
-
-		for (int i = 0; i < 3; i++)
-		{
-			cartridges[i] = new ModItemBase(i + 10009, cartridgeTextures[i], cartridgeNames[i]);
-		}
-		
 		for (int i = 0; i < 6; i++)
 		{
+			if (i < 4){
+				ingots[i] = new ModItemBase(i + 10005, ingotTextures[i], ingotNames[i]);
+				coins[i] = new ModItemBase(i + 10018, coinNames[i], coinNames[i]);
+			}
+			if (i < 3)
+				cartridges[i] = new ModItemBase(i + 10009, cartridgeTextures[i], cartridgeNames[i]);
+
 			bills[i] = new ModItemBase(i + 10012, billTextures[i], billNames[i]);
 		}
-		
-		Penny = (new ItemPenny(1019).setUnlocalizedName("Penny"));
-		Nickel = (new ItemNickel(1020).setUnlocalizedName("Nickel"));
-		Dime = (new ItemDime(1021).setUnlocalizedName("Dime"));
-		Quarter = (new ItemQuarter(1022).setUnlocalizedName("Quarter"));
 
 		emeraldArmorHead = (new ItemEmeraldArmor(1023, enumEmeraldArmor, RenderingRegistry.addNewArmourRendererPrefix("emeraldarmor"), 0).setUnlocalizedName("Emerald Helmet"));
 		emeraldArmorBody = (new ItemEmeraldArmor(1024, enumEmeraldArmor, RenderingRegistry.addNewArmourRendererPrefix("emeraldarmor"), 1).setUnlocalizedName("Emerald Chestplate"));
@@ -152,26 +141,18 @@ public class ModItem {
 		SapphireShovel = (new ItemSapphireShovel(1048, EnumToolMaterial.IRON).setUnlocalizedName("Sapphire Shovel").setCreativeTab(GioMod.GioTab));
 		SapphireSword = (new ItemSapphireSword(1049, EnumToolMaterial.IRON).setUnlocalizedName("Sapphire Sword").setCreativeTab(GioMod.GioTab));
 
-		for (int num = 0; num < 4; num++)
+		for (int i = 0; i < 6; i++)
 		{
-			LanguageRegistry.instance().addStringLocalization("item." + ingotNames[num] + ".name", ingotLocNames[num]);
-		}
-		
-		for (int num = 0; num < 3; num++)
-		{
-			LanguageRegistry.instance().addStringLocalization("item." + cartridgeNames[num] + ".name", cartridgeLocNames[num]);
-		}
-		
-		for (int num = 0; num < 6; num++)
-		{
-			LanguageRegistry.instance().addStringLocalization("item." + billNames[num] + ".name", billLocNames[num]);
-		}
-		
-		LanguageRegistry.addName(Penny, "Penny");
-		LanguageRegistry.addName(Nickel, "Nickel");
-		LanguageRegistry.addName(Dime, "Dime");
-		LanguageRegistry.addName(Quarter, "Quarter");
+			if (i < 3)
+				LanguageRegistry.instance().addStringLocalization("item." + cartridgeNames[i] + ".name", cartridgeLocNames[i]);
+			if (i < 4){
+				LanguageRegistry.instance().addStringLocalization("item." + ingotNames[i] + ".name", ingotLocNames[i]);
+				LanguageRegistry.instance().addStringLocalization("item." + coinNames[i] + ".name", coinLocNames[i]);
+			}
+			LanguageRegistry.instance().addStringLocalization("item." + billNames[i] + ".name", billLocNames[i]);
 
+		}
+		
 		LanguageRegistry.addName(emeraldArmorHead, "Emerald Helmet");
 		LanguageRegistry.addName(emeraldArmorBody, "Emelrad Chestplate");
 		LanguageRegistry.addName(emeraldArmorLeggings, "Emerald Leggings");

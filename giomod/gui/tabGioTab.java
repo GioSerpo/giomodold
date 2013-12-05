@@ -1,6 +1,7 @@
 package giomod.gui;
 
 import giomod.GioMod;
+import giomod.items.ModItem;
 
 import java.util.Random;
 
@@ -11,18 +12,18 @@ import net.minecraft.creativetab.CreativeTabs;
 public final class tabGioTab extends CreativeTabs 
 {
 
-	public tabGioTab(int par1, String par2str)
+	public tabGioTab(int id)
 	{
-		super(par1, par2str);
+		super(id, "gioTab");
+	}
+	@Override
+	public String getTabLabel() {
+		return "gioTab";
 	}
 	@SideOnly(Side.CLIENT)
 	public int getTabIconItemIndex()
 	{
-		return GioMod.GioTabIcon.itemID;
-	}
-	public String getTranslateTabLabel()
-	{
-		return "Afflouhau Mods";
+		return ModItem.EmeraldPickaxe.itemID;
 	}
 }
 
