@@ -17,6 +17,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -106,7 +108,7 @@ public class GioMod
 		
 		GameRegistry.addRecipe(new ItemStack(GioMod.CoinPress, 1), new Object []
 				{
-				"PPP", "N0N", "PPP", 'P', Block.pistonBase, 'N', ModOreRegistration.NICKELING
+				"PPP", "N0N", "PPP", 'P', Block.pistonBase, 'N', ModItem.ingots[3] //Do it like this
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(GioMod.MoneyPrinter, 1), new Object []

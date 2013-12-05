@@ -67,14 +67,14 @@ public class ModItem {
 	public static Item SapphireShovel;
 	public static Item SapphireSword;
 	
-	public static Item RubyGio, Sapphire, CopperIngot, NickelIngot;	
+	private static Item RubyGio, Sapphire, CopperIngot, NickelIngot;	
 	/**Ruby, Sapphire, Copper, Nickel*/
 	public static Item[] ingots = {RubyGio, Sapphire, CopperIngot, NickelIngot};
 	public static String[] ingotNames = {"ruby", "sapphire", "ingotCopper", "ingotNickel"};
 	public static String[] ingotTextures = {"rubygio", "sapphire", "copperingot", "nickelingot"};
 	public static String[] ingotLocNames = {"Ruby", "Sapphire", "Copper Ingot", "Nickel Ingot"};
 	
-	public static Item BlackInkCartridge, ColorInkCartridge, EmptyInkCartridge;
+	private static Item BlackInkCartridge, ColorInkCartridge, EmptyInkCartridge;
 	/**Black, Color, Empty*/
 	public static Item[] cartridges = {BlackInkCartridge, ColorInkCartridge, EmptyInkCartridge};
 	public static String[] cartridgeNames = {"cartridgeBlack", "cartridgeColor", "cartridgeEmpty"};
@@ -82,14 +82,14 @@ public class ModItem {
 	public static String[] cartridgeLocNames = {"Black Ink Cartridge", "Color Ink Cartridge", "Empty Ink Cartridge"};
 	
 	
-	public static Item Dollar, Five, Ten, Twenty, Fifty, Hundred;
+	private static Item Dollar, Five, Ten, Twenty, Fifty, Hundred;
 	/**In order of worth (1, 5, 10, 20, 50, 100)*/
 	public static Item[] bills = {Dollar, Five, Ten, Twenty, Fifty, Hundred};
 	public static String[] billNames = {"dollar", "five", "ten", "twenty", "fifty", "hundred"};
 	public static String[] billTextures = {"onedollar", "fivedollar", "tendollar", "twentydollar", "fiftydollar", "hundreddollar"};
 	public static String[] billLocNames = {"One Dollar Bill", "Five Dollar Bill", "Ten Dollar Bill", "Twenty Dollar Bill", "Fifty Dollar Bill", "Hundred Dollar Bill"};
 	
-	public static Item Penny, Nickel, Dime, Quarter;
+	private static Item Penny, Nickel, Dime, Quarter;
 	/**In order of worth (Penny, Nickel, Dime, Quarter)*/
 	public static Item[] coins = {Penny, Nickel, Dime, Quarter};
 	public static String[] coinNames = {"penny", "nickel", "dime", "quarter"}; //texture names are the same
