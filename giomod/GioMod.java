@@ -98,7 +98,7 @@ public class GioMod
 		GameRegistry.registerBlock(CoinPress);
 		GameRegistry.registerBlock(MoneyPrinter);
 		
-		GameRegistry.addRecipe(new ItemStack(ModItem.EmptyInkCartridge, 1), new Object []
+		GameRegistry.addRecipe(new ItemStack(ModItem.cartridges[0], 1), new Object []
 				{
 				"RRR", "R0R", "RRR", 'R', Item.redstone
 				});
@@ -110,7 +110,7 @@ public class GioMod
 		
 		GameRegistry.addRecipe(new ItemStack(GioMod.MoneyPrinter, 1), new Object []
 				{
-				"C0B", "NNN", "III", 'C', ModItem.ColorInkCartridge, 'B', ModItem.BlackInkCartridge, 'N', ModItem.ingots[3], 'I', ModItem.ingots[2]
+				"C0B", "NNN", "III", 'C', ModItem.cartridges[1], 'B', ModItem.cartridges[0], 'N', ModItem.ingots[3], 'I', ModItem.ingots[2]
 				});
 		
 		GameRegistry.addRecipe(new ItemStack(ModItem.emeraldArmorHead, 1), new Object []
@@ -248,14 +248,14 @@ public class GioMod
 				"0E0", "0E0", "0S0", 'E', ModItem.ingots[1], 'S', Item.stick
 				});
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItem.BlackInkCartridge, 1), new Object []
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItem.cartridges[0], 1), new Object []
 				{
-				ModItem.EmptyInkCartridge, new ItemStack(Item.dyePowder, 0, 0)
+				ModItem.cartridges[0], new ItemStack(Item.dyePowder, 0, 0)
 				});
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItem.ColorInkCartridge, 1), new Object []
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItem.cartridges[1], 1), new Object []
 				{
-				ModItem.EmptyInkCartridge, new ItemStack(Item.dyePowder, 6, 6), new ItemStack(Item.dyePowder, 11, 11), new ItemStack(Item.dyePowder, 14, 14)
+				ModItem.cartridges[0], new ItemStack(Item.dyePowder, 6, 6), new ItemStack(Item.dyePowder, 11, 11), new ItemStack(Item.dyePowder, 14, 14)
 				});
 		
 		new GenerationHandler();
