@@ -4,6 +4,7 @@ import giomod.GioMod;
 import giomod.items.ModItem;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumArmorMaterial;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 
 public class ItemEmeraldArmor extends ItemArmor
