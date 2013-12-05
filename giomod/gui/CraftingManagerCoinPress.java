@@ -1,6 +1,7 @@
 package giomod.gui;
 
 import giomod.GioMod;
+import giomod.items.ModItem;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,24 +40,24 @@ public class CraftingManagerCoinPress
 
     public CraftingManagerCoinPress()
     {
-        this.addRecipe(new ItemStack(GioMod.Penny, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.Penny, 5), new Object[] 
         	{
-        	"0C0","000", "000", 'C',  GioMod.CopperIngot
+        	"0C0","000", "000", 'C',  ModItem.CopperIngot
         	});
         
-        this.addRecipe(new ItemStack(GioMod.Nickel, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.Nickel, 5), new Object[] 
         	{
-        	"0N0","000", "000", 'N',  GioMod.NickelIngot
+        	"0N0","000", "000", 'N',  ModItem.NickelIngot
         	});
         
-        this.addRecipe(new ItemStack(GioMod.Dime, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.Dime, 5), new Object[] 
         	{
-        	"CNN","000","000", 'C', GioMod.CopperIngot, 'N',  GioMod.NickelIngot
+        	"CNN","000","000", 'C', ModItem.CopperIngot, 'N',  ModItem.NickelIngot
         	});
         
-        this.addRecipe(new ItemStack(GioMod.Quarter, 5), new Object[] 
+        this.addRecipe(new ItemStack(ModItem.Quarter, 5), new Object[] 
         	{
-        	"NNN","000","000", 'N', GioMod.NickelIngot
+        	"NNN","000","000", 'N', ModItem.NickelIngot
         	});
         
         Collections.sort(this.recipes, new RecipeSorterCoinPress(this));
