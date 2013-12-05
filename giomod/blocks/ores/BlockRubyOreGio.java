@@ -1,6 +1,7 @@
 package giomod.blocks.ores;
 
 import giomod.GioMod;
+import giomod.items.ModItem;
 
 import java.util.Random;
 
@@ -27,7 +28,7 @@ public class BlockRubyOreGio extends Block
 
 	public int idDropped(int par1, Random par2Random, int par3)
 	{
-		return GioMod.RubyGio.itemID;
+		return ModItem.ingots[0].itemID;
 	}
 
 	public int quantityDropped(Random par1Random)
